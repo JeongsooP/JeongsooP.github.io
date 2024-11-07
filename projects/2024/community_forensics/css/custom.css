@@ -1,0 +1,22 @@
+/* Override Bootstrap's container width */
+@media (min-width: 1500px) {
+    .container {
+        width: 1500px; /* or whatever width you prefer */
+    }
+}
+
+/* Make content wrapper wider */
+.content-wrapper {
+    max-width: 1500px; /* Adjust as needed */
+    width: 90%; /* Allows some margin on very wide screens */
+}
+
+/* Adjust main content padding */
+.main-content {
+    padding: 0 20px; /* Reduce side padding if needed */
+}
+
+/* Adjust title row max-width */
+.title-row {
+    max-width: 1500px; /* Match with content-wrapper */
+}
