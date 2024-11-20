@@ -67,7 +67,7 @@
             display: flex;
             width: 300vw;
             height: 100%;
-            /*animation: scroll 800s linear infinite;*/
+            /*animation: scroll 900s linear infinite;*/
             opacity: 0.1; /* Adjust transparency here */
         }
         .background-scroller-inner img {
@@ -88,7 +88,7 @@
             position: relative;
             z-index: 1;
             background-color: rgba(255, 255, 255, 1);
-            max-width: 1800px;
+            max-width: 1100px;
             width: 90%;
             margin: 0 auto;
             padding: 20px;
@@ -164,7 +164,7 @@
             }
         }
         .title-row {
-            max-width: 1800px;
+            max-width: 1100px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -270,7 +270,7 @@
                         </p>
                         <div style="height:16px;font-size:16px;">&nbsp;</div>
                         <p class="text-justify" style="font-size: 1rem;">
-                            One of the key challenges of detecting AI-generated images is spotting images that have been created by previously unseen generative models. We argue that the limited diversity of the training data is a major obstacle to addressing this problem, and we propose a new dataset that is significantly larger and more diverse than prior work. As part of creating this dataset, we systematically download thousands of text-to-image latent diffusion models and sample images from them. We also collect images from dozens of popular open source and commercial models. The resulting dataset contains 2.7M images that have been sampled from 4803 different models. These images collectively capture a wide range of scene content, generator architectures, and image processing settings. Using this dataset, we study the generalization abilities of fake image detectors. Our experiments suggest that detection performance improves as the number of models in the training set increases, even when these models have similar architectures. We also find that detection performance improves as the diversity of the models increases, and that our trained detectors generalize better than those trained on other datasets.
+                            One of the key challenges of detecting AI-generated images is spotting images that have been created by previously unseen generative models. We argue that the limited diversity of the training data is a major obstacle to addressing this problem, and we propose a new dataset that is significantly larger and more diverse than prior work. As part of creating this dataset, we systematically download thousands of text-to-image latent diffusion models and sample images from them. We also collect images from dozens of popular open source and commercial models. The resulting dataset contains 2.7M images that have been sampled from 4803 different models. These images collectively capture a wide range of scene content, generator architectures, and image processing settings. Using this dataset, we study the generalization abilities of fake image detectors. Our experiments suggest that detection performance improves as the number of models in the training set increases, even when these models have similar architectures. We also find that increasing the diversity of the models improves detection performance, and that our trained detectors generalize better than those trained on other datasets.
                         </p>
                     </div>
                 </div>
@@ -382,7 +382,7 @@
             // Remove and re-add the animation
             scroller.style.animation = 'none';
             setTimeout(() => {
-                scroller.style.animation = 'scroll 1200s linear infinite';
+                scroller.style.animation = 'scroll 900s linear infinite';
             }, 10);
         });
     </script>
