@@ -63,69 +63,68 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-a {
-  color: #1772d0;
-  text-decoration: none;
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: #242b33; background: #fff; font: 15px/1.65 'Lato', Verdana, Helvetica, sans-serif; }
+body { max-width: 900px; margin: 0 auto; padding: 28px 32px 24px; }
+a { color: #176bad; text-decoration: none; }
+a:hover, a:focus-visible { color: #92511a; text-decoration: underline; }
+a:focus-visible { outline: 2px solid #176bad; outline-offset: 4px; }
+.intro { display: grid; grid-template-columns: 1fr 200px; gap: 40px; align-items: center; padding: 12px 0 4px; }
+h1 { margin: 0; font-size: 34px; font-weight: 400; line-height: 1.25; letter-spacing: -.6px; }
+.email { display: inline-block; margin: 7px 0 6px; font-size: 14px; }
+p { margin: 10px 0; }
+.portrait img { display: block; width: 100%; height: auto; border-radius: 5px; }
+.social-links { display: flex; flex-wrap: wrap; gap: 8px 19px; margin-top: 18px; font-size: 14px; }
+section { margin-top: 36px; scroll-margin-top: 24px; }
+h2 { font-size: 23px; font-weight: 400; line-height: 1.4; margin: 0 0 16px; padding-bottom: 9px; border-bottom: 1px solid #e7eaee; }
+h3 { margin: 0; font-size: 15px; font-weight: 700; line-height: 1.5; }
+.interests { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin: 20px 0 0; }
+.interests > div { padding: 16px 18px; border-left: 3px solid #6389a9; background: #f5f7f9; border-radius: 0 4px 4px 0; }
+dt { font-weight: 700; color: #243e54; }
+dd { margin: 5px 0 0; color: #52606c; font-size: 14px; }
+.publication { display: grid; grid-template-columns: 170px minmax(0, 1fr); align-items: center; gap: 25px; margin: 25px 0 32px; font-size: 14px; }
+.publication img { width: 100%; height: auto; }
+.publication p { margin: 10px 0 0; }
+.entry { margin: 18px 0 22px; }
+.entry-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
+.entry-heading span { color: #65717c; font-size: 13px; white-space: nowrap; }
+.entry p { margin: 3px 0; font-size: 14px; }
+.role, .muted { color: #65717c; }
+footer { margin-top: 42px; padding-top: 17px; border-top: 1px solid #e7eaee; font-size: 12px; color: #65717c; }
+@media (max-width: 640px) {
+  body { padding: 20px; }
+  .intro { grid-template-columns: 1fr 125px; gap: 20px; align-items: start; }
+  .portrait { margin-top: 8px; }
+  h1 { font-size: 29px; }
+  .interests { grid-template-columns: 1fr; }
+  .publication { grid-template-columns: 120px minmax(0, 1fr); gap: 18px; }
+  .entry-heading { flex-wrap: wrap; gap: 2px 15px; }
+}
+@media (max-width: 440px) {
+  .intro { grid-template-columns: 1fr; }
+  .portrait { grid-row: 1; width: 135px; }
+  .publication { grid-template-columns: 1fr; gap: 14px; }
+  .publication img { max-width: 200px; }
 }
 
-a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: none;
+/* Profile and institution icons are decorative; adjacent text names each link. */
+.social-links a { display: inline-flex; align-items: center; gap: 6px; }
+.profile-icon { width: 16px; height: 16px; object-fit: contain; flex-shrink: 0; }
+.experience-entry { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 17px; align-items: start; }
+.institution-icon { width: 50px; height: 50px; padding: 7px; object-fit: contain; background: #fff; border: 1px solid #e7eaee; border-radius: 6px; }
+@media (max-width: 440px) {
+  .experience-entry { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; }
+  .institution-icon { width: 40px; height: 40px; padding: 5px; }
 }
 
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
-}
+/* Give Michigan its navy field and fit SKKU's padded source inside the frame. */
+.michigan-icon { background: #00274c; border-color: #00274c; }
+.skku-icon { display: flex; align-items: center; justify-content: center; padding: 0; overflow: hidden; }
+.skku-icon img { display: block; width: 100%; height: 100%; object-fit: contain; transform: scale(1.4); }
 
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-}
+.adobe-icon { padding: 0; background: #e2231a; border-color: #e2231a; }
+.cornell-icon { padding: 1px; }
 
-heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
-papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700
-}
-
-name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
-}
-
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
-}
-
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-span.highlight {
-  background-color: #ffffd0;
-}
+.publication[id], #adobe-research { scroll-margin-top: 24px; }
